@@ -13,7 +13,7 @@ function Header({}: Props) {
         <div>
           {address ? (
             <button className="connectWalletBtn" onClick={disconnect}>
-              Hi, {address}
+              Hi, {address.slice(0, 5) + '...' + address.slice(-4)}
             </button>
           ) : (
             <button onClick={connectWithMetamask} className="connectWalletBtn">
