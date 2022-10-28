@@ -1,5 +1,11 @@
 import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react'
 import Link from 'next/link'
+import {
+  ChevronDownIcon,
+  BellIcon,
+  ShoppingCartIcon,
+  MagnifyingGlassIcon,
+} from '@heroicons/react/24/outline'
 
 type Props = {}
 
@@ -37,7 +43,10 @@ function Header({}: Props) {
             <Link href="#">Watchlist</Link>
           </li>
           <li>
-            <Link href="">Add to Inventory</Link>
+            <Link href="/addItem" className="flex items-center hover:link">
+              Add to Inventory
+              <ChevronDownIcon className="h-4" />
+            </Link>
           </li>
         </ul>
       </nav>
